@@ -1,0 +1,127 @@
+/*Build a Shopping System.
+
+Where we have 10 Products
+Products are objects
+Product can have id, name , price, brand
+
+Products can be arrange by name or price or brand. (In Asc and Desc)
+
+You need to show total price of all products
+
+Product can be search by Name or Price, search result can 0 to N.
+
+New Product can be add in middle , end , beg
+
+Any Existing product can be delete by name or price.
+Can be delete single or multiple products
+
+Every product has 10% Tax , it need to be show during printing. 
+So the Final price of product can be Price + Tax.
+
+Show the Highest and Lowest Price Product
+
+Show the Sum of all Products whose price is >2000.
+*/
+undefined
+var products = [ {id:100 , name:'a' , brand:'b0' , price:1003 },{id:101 , name:'b' , brand:'b1' , price:3938},{id:102 , name:'c' , brand:'b2' , price:2745 },{id:103 , name:'d' , brand:'b3' , price:7463 },{id:104 , name:'e' , brand:'b4' , price:2644 },{id:105 , name:'f' , brand:'b5' , price:9847 },{id:106 , name:'g' , brand:'b6' , price:3675 },{id:107 , name:'h' , brand:'b7' , price:9493 },{id:108 , name:'i' , brand:'b8' , price:3759 },{id:109 , name:'j' , brand:'b9' , price:8164 } ]
+
+undefined
+products.sort(price);
+VM7042:1 Uncaught ReferenceError: price is not defined
+    at <anonymous>:1:15
+(anonymous) @ VM7042:1
+products.sort();
+(10) [{…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}]0: {id: 100, name: 'a', brand: 'b0', price: 1003}brand: "b0"id: 100name: "a"price: 1003[[Prototype]]: Object1: {id: 101, name: 'b', brand: 'b1', price: 3938}brand: "b1"id: 101name: "b"price: 3938[[Prototype]]: Object2: {id: 102, name: 'c', brand: 'b2', price: 2745}brand: "b2"id: 102name: "c"price: 2745[[Prototype]]: Object3: {id: 103, name: 'd', brand: 'b3', price: 7463}4: {id: 104, name: 'e', brand: 'b4', price: 2644}5: {id: 105, name: 'f', brand: 'b5', price: 9847}6: {id: 106, name: 'g', brand: 'b6', price: 3675}7: {id: 107, name: 'h', brand: 'b7', price: 9493}8: {id: 108, name: 'i', brand: 'b8', price: 3759}9: {id: 109, name: 'j', brand: 'b9', price: 8164}length: 10[[Prototype]]: Array(0)
+names.sort((a,b)=>a-b);
+(4) ['ajay', 'anil', 'ram', 'shyam']
+name.sort((a,b)=>a-b);
+VM7408:1 Uncaught TypeError: name.sort is not a function
+    at <anonymous>:1:6
+(anonymous) @ VM7408:1
+products.sort();
+(10) [{…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}]0: {id: 100, name: 'a', brand: 'b0', price: 1003}1: {id: 101, name: 'b', brand: 'b1', price: 3938}2: {id: 102, name: 'c', brand: 'b2', price: 2745}3: {id: 103, name: 'd', brand: 'b3', price: 7463}4: {id: 104, name: 'e', brand: 'b4', price: 2644}5: {id: 105, name: 'f', brand: 'b5', price: 9847}6: {id: 106, name: 'g', brand: 'b6', price: 3675}7: {id: 107, name: 'h', brand: 'b7', price: 9493}8: {id: 108, name: 'i', brand: 'b8', price: 3759}9: {id: 109, name: 'j', brand: 'b9', price: 8164}length: 10[[Prototype]]: Array(0)
+products.sort((a,b)=>a-b);
+(10) [{…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}]0: {id: 100, name: 'a', brand: 'b0', price: 1003}1: {id: 101, name: 'b', brand: 'b1', price: 3938}2: {id: 102, name: 'c', brand: 'b2', price: 2745}3: {id: 103, name: 'd', brand: 'b3', price: 7463}4: {id: 104, name: 'e', brand: 'b4', price: 2644}5: {id: 105, name: 'f', brand: 'b5', price: 9847}6: {id: 106, name: 'g', brand: 'b6', price: 3675}7: {id: 107, name: 'h', brand: 'b7', price: 9493}8: {id: 108, name: 'i', brand: 'b8', price: 3759}9: {id: 109, name: 'j', brand: 'b9', price: 8164}length: 10[[Prototype]]: Array(0)
+products.sort((a,b)=>a.price-b.price);
+(10) [{…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}]0: {id: 100, name: 'a', brand: 'b0', price: 1003}1: {id: 104, name: 'e', brand: 'b4', price: 2644}2: {id: 102, name: 'c', brand: 'b2', price: 2745}3: {id: 106, name: 'g', brand: 'b6', price: 3675}4: {id: 108, name: 'i', brand: 'b8', price: 3759}5: {id: 101, name: 'b', brand: 'b1', price: 3938}6: {id: 103, name: 'd', brand: 'b3', price: 7463}7: {id: 109, name: 'j', brand: 'b9', price: 8164}8: {id: 107, name: 'h', brand: 'b7', price: 9493}9: {id: 105, name: 'f', brand: 'b5', price: 9847}length: 10[[Prototype]]: Array(0)
+products.sort((a,b)=>a.brand-b.brand);
+(10) [{…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}]0: {id: 100, name: 'a', brand: 'b0', price: 1003}1: {id: 104, name: 'e', brand: 'b4', price: 2644}2: {id: 102, name: 'c', brand: 'b2', price: 2745}3: {id: 106, name: 'g', brand: 'b6', price: 3675}4: {id: 108, name: 'i', brand: 'b8', price: 3759}5: {id: 101, name: 'b', brand: 'b1', price: 3938}6: {id: 103, name: 'd', brand: 'b3', price: 7463}7: {id: 109, name: 'j', brand: 'b9', price: 8164}8: {id: 107, name: 'h', brand: 'b7', price: 9493}9: {id: 105, name: 'f', brand: 'b5', price: 9847}length: 10[[Prototype]]: Array(0)
+products.sort((a,b)=>a.name-b.name);
+(10) [{…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}]0: {id: 100, name: 'a', brand: 'b0', price: 1003}1: {id: 104, name: 'e', brand: 'b4', price: 2644}2: {id: 102, name: 'c', brand: 'b2', price: 2745}3: {id: 106, name: 'g', brand: 'b6', price: 3675}4: {id: 108, name: 'i', brand: 'b8', price: 3759}5: {id: 101, name: 'b', brand: 'b1', price: 3938}6: {id: 103, name: 'd', brand: 'b3', price: 7463}7: {id: 109, name: 'j', brand: 'b9', price: 8164}8: {id: 107, name: 'h', brand: 'b7', price: 9493}9: {id: 105, name: 'f', brand: 'b5', price: 9847}length: 10[[Prototype]]: Array(0)
+products.sort((a,b)=>a.id-b.id);
+(10) [{…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}]0: {id: 100, name: 'a', brand: 'b0', price: 1003}1: {id: 101, name: 'b', brand: 'b1', price: 3938}2: {id: 102, name: 'c', brand: 'b2', price: 2745}3: {id: 103, name: 'd', brand: 'b3', price: 7463}4: {id: 104, name: 'e', brand: 'b4', price: 2644}5: {id: 105, name: 'f', brand: 'b5', price: 9847}6: {id: 106, name: 'g', brand: 'b6', price: 3675}7: {id: 107, name: 'h', brand: 'b7', price: 9493}8: {id: 108, name: 'i', brand: 'b8', price: 3759}9: {id: 109, name: 'j', brand: 'b9', price: 8164}length: 10[[Prototype]]: Array(0)
+products.sort((a,b)=>a.id-b.name);
+(10) [{…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}]0: {id: 100, name: 'a', brand: 'b0', price: 1003}1: {id: 101, name: 'b', brand: 'b1', price: 3938}2: {id: 102, name: 'c', brand: 'b2', price: 2745}3: {id: 103, name: 'd', brand: 'b3', price: 7463}4: {id: 104, name: 'e', brand: 'b4', price: 2644}5: {id: 105, name: 'f', brand: 'b5', price: 9847}6: {id: 106, name: 'g', brand: 'b6', price: 3675}7: {id: 107, name: 'h', brand: 'b7', price: 9493}8: {id: 108, name: 'i', brand: 'b8', price: 3759}9: {id: 109, name: 'j', brand: 'b9', price: 8164}length: 10[[Prototype]]: Array(0)
+products.sort((a,b)=>a.id-b.brand);
+(10) [{…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}]0: {id: 100, name: 'a', brand: 'b0', price: 1003}1: {id: 101, name: 'b', brand: 'b1', price: 3938}2: {id: 102, name: 'c', brand: 'b2', price: 2745}3: {id: 103, name: 'd', brand: 'b3', price: 7463}4: {id: 104, name: 'e', brand: 'b4', price: 2644}5: {id: 105, name: 'f', brand: 'b5', price: 9847}6: {id: 106, name: 'g', brand: 'b6', price: 3675}7: {id: 107, name: 'h', brand: 'b7', price: 9493}8: {id: 108, name: 'i', brand: 'b8', price: 3759}9: {id: 109, name: 'j', brand: 'b9', price: 8164}length: 10[[Prototype]]: Array(0)
+products.sort((a,b)=>a.price-b.brand);
+(10) [{…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}]0: {id: 100, name: 'a', brand: 'b0', price: 1003}1: {id: 101, name: 'b', brand: 'b1', price: 3938}2: {id: 102, name: 'c', brand: 'b2', price: 2745}3: {id: 103, name: 'd', brand: 'b3', price: 7463}4: {id: 104, name: 'e', brand: 'b4', price: 2644}5: {id: 105, name: 'f', brand: 'b5', price: 9847}6: {id: 106, name: 'g', brand: 'b6', price: 3675}7: {id: 107, name: 'h', brand: 'b7', price: 9493}8: {id: 108, name: 'i', brand: 'b8', price: 3759}9: {id: 109, name: 'j', brand: 'b9', price: 8164}length: 10[[Prototype]]: Array(0)
+products.reduce((products)=>products.price);
+VM8787:1 Uncaught TypeError: Cannot read properties of undefined (reading 'price')
+    at <anonymous>:1:38
+    at Array.reduce (<anonymous>)
+    at <anonymous>:1:10
+(anonymous) @ VM8787:1
+(anonymous) @ VM8787:1
+products.reduce((ele)=>ele.price);
+VM8892:1 Uncaught TypeError: Cannot read properties of undefined (reading 'price')
+    at <anonymous>:1:28
+    at Array.reduce (<anonymous>)
+    at <anonymous>:1:10
+(anonymous) @ VM8892:1
+(anonymous) @ VM8892:1
+products.sort((a,b)=>b.price-a.brand);
+(10) [{…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}]0: {id: 100, name: 'a', brand: 'b0', price: 1003}1: {id: 101, name: 'b', brand: 'b1', price: 3938}2: {id: 102, name: 'c', brand: 'b2', price: 2745}3: {id: 103, name: 'd', brand: 'b3', price: 7463}4: {id: 104, name: 'e', brand: 'b4', price: 2644}5: {id: 105, name: 'f', brand: 'b5', price: 9847}6: {id: 106, name: 'g', brand: 'b6', price: 3675}7: {id: 107, name: 'h', brand: 'b7', price: 9493}8: {id: 108, name: 'i', brand: 'b8', price: 3759}9: {id: 109, name: 'j', brand: 'b9', price: 8164}length: 10[[Prototype]]: Array(0)
+products.sort((a,b)=>b.price-a.price);
+(10) [{…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}]0: {id: 105, name: 'f', brand: 'b5', price: 9847}1: {id: 107, name: 'h', brand: 'b7', price: 9493}2: {id: 109, name: 'j', brand: 'b9', price: 8164}3: {id: 103, name: 'd', brand: 'b3', price: 7463}4: {id: 101, name: 'b', brand: 'b1', price: 3938}5: {id: 108, name: 'i', brand: 'b8', price: 3759}6: {id: 106, name: 'g', brand: 'b6', price: 3675}7: {id: 102, name: 'c', brand: 'b2', price: 2745}8: {id: 104, name: 'e', brand: 'b4', price: 2644}9: {id: 100, name: 'a', brand: 'b0', price: 1003}length: 10[[Prototype]]: Array(0)
+products.sort((a,b)=>{b.price-a.price});
+(10) [{…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}]0: {id: 105, name: 'f', brand: 'b5', price: 9847}1: {id: 107, name: 'h', brand: 'b7', price: 9493}2: {id: 109, name: 'j', brand: 'b9', price: 8164}3: {id: 103, name: 'd', brand: 'b3', price: 7463}4: {id: 101, name: 'b', brand: 'b1', price: 3938}5: {id: 108, name: 'i', brand: 'b8', price: 3759}6: {id: 106, name: 'g', brand: 'b6', price: 3675}7: {id: 102, name: 'c', brand: 'b2', price: 2745}8: {id: 104, name: 'e', brand: 'b4', price: 2644}9: {id: 100, name: 'a', brand: 'b0', price: 1003}length: 10[[Prototype]]: Array(0)
+products.sort((a,b)=>{
+    return b.price-a.price
+});
+(10) [{…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}]0: {id: 105, name: 'f', brand: 'b5', price: 9847}1: {id: 107, name: 'h', brand: 'b7', price: 9493}2: {id: 109, name: 'j', brand: 'b9', price: 8164}3: {id: 103, name: 'd', brand: 'b3', price: 7463}4: {id: 101, name: 'b', brand: 'b1', price: 3938}5: {id: 108, name: 'i', brand: 'b8', price: 3759}6: {id: 106, name: 'g', brand: 'b6', price: 3675}7: {id: 102, name: 'c', brand: 'b2', price: 2745}8: {id: 104, name: 'e', brand: 'b4', price: 2644}9: {id: 100, name: 'a', brand: 'b0', price: 1003}length: 10[[Prototype]]: Array(0)
+products.sort((a,b)=>{
+    return a.price-b.price
+});
+(10) [{…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}]0: {id: 100, name: 'a', brand: 'b0', price: 1003}1: {id: 104, name: 'e', brand: 'b4', price: 2644}2: {id: 102, name: 'c', brand: 'b2', price: 2745}3: {id: 106, name: 'g', brand: 'b6', price: 3675}4: {id: 108, name: 'i', brand: 'b8', price: 3759}5: {id: 101, name: 'b', brand: 'b1', price: 3938}6: {id: 103, name: 'd', brand: 'b3', price: 7463}7: {id: 109, name: 'j', brand: 'b9', price: 8164}8: {id: 107, name: 'h', brand: 'b7', price: 9493}9: {id: 105, name: 'f', brand: 'b5', price: 9847}length: 10[[Prototype]]: Array(0)
+products.sort((a,b)=>{
+    let pa = a.name.toLowerCase() ,
+        pb = b.name.toLowerCase()
+    if(pa > pb){
+        return -1;
+    }
+    else  if(pa < pb){
+        return 1;
+    }
+    else{
+        return 0 ;
+    }
+});
+(10) [{…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}]0: {id: 109, name: 'j', brand: 'b9', price: 8164}1: {id: 108, name: 'i', brand: 'b8', price: 3759}2: {id: 107, name: 'h', brand: 'b7', price: 9493}3: {id: 106, name: 'g', brand: 'b6', price: 3675}4: {id: 105, name: 'f', brand: 'b5', price: 9847}5: {id: 104, name: 'e', brand: 'b4', price: 2644}6: {id: 103, name: 'd', brand: 'b3', price: 7463}7: {id: 102, name: 'c', brand: 'b2', price: 2745}8: {id: 101, name: 'b', brand: 'b1', price: 3938}9: {id: 100, name: 'a', brand: 'b0', price: 1003}length: 10[[Prototype]]: Array(0)
+products.sort((a,b)=>{
+    let pa = a.name.toLowerCase() ,
+        pb = b.name.toLowerCase()
+    if(pa < pb){
+        return -1;
+    }
+    else  if(pa > pb){
+        return 1;
+    }
+    else{
+        return 0 ;
+    }
+});
+(10) [{…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}]0: {id: 100, name: 'a', brand: 'b0', price: 1003}1: {id: 101, name: 'b', brand: 'b1', price: 3938}2: {id: 102, name: 'c', brand: 'b2', price: 2745}3: {id: 103, name: 'd', brand: 'b3', price: 7463}4: {id: 104, name: 'e', brand: 'b4', price: 2644}5: {id: 105, name: 'f', brand: 'b5', price: 9847}6: {id: 106, name: 'g', brand: 'b6', price: 3675}7: {id: 107, name: 'h', brand: 'b7', price: 9493}8: {id: 108, name: 'i', brand: 'b8', price: 3759}9: {id: 109, name: 'j', brand: 'b9', price: 8164}length: 10[[Prototype]]: Array(0)
+products.sort((a,b)=>{
+    let pa = a.name.toLowerCase() ,
+        pb = b.name.toLowerCase()
+    if(pa < pb){
+        return -1;
+    }
+    else  if(pa > pb){
+        return 1;
+    }
+    else{
+        return 0 ;
+    }
+});
